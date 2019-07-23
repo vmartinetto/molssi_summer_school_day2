@@ -6,3 +6,4 @@ This repository contians fies for day 2 of the MoLSSI Software Summer School.
 
 1. QCArchive
 2. git
+3. Documentation
