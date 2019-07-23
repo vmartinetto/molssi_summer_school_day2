@@ -1,3 +1,8 @@
+""" 
+Geometry Analysis
+"""
+
+
 import os
 import numpy as np
 
@@ -18,7 +23,23 @@ def calculate_distance_list(rA, rB):
 
 
 def build_bond_list(coordinates, max_bond=2.93, min_bond=0):
-    """in bohr"""
+    """build a list of the bonds from a given list of atomic coordinates
+
+    Parameters
+    ----------
+    coordinates : np.array
+        An array of the atomic coordinates.
+    max_bond: float, optinal
+	The maximum distance to be considered an bond. Default is 2.93 bohr.
+    min_bond: float, optinal
+        The minimum distance to be considered a bond. Default is 0
+
+    Returns
+    -------
+    bonds : dict
+        A dictionary where the bond distances are values attached to a key tuple of the bonded atoms indexes. 
+
+    """
     num_atoms = len(coordinates)
     
     bonds = {}
